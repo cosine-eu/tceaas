@@ -12,6 +12,7 @@ ExecStart=@libdir@/tceaas load %f
 ExecStop=@libdir@/tceaas unload
 RemainAfterExit=yes
 RuntimeDirectory=tceaas/%i
+IgnoreSIGPIPE=no
 
 [Install]
 WantedBy=multi-user.target

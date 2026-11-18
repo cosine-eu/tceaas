@@ -15,8 +15,8 @@ unload() {
 _unlink() {
     for member
     do
-        [[ "$(readlink "${member#$RUNTIME_DIRECTORY}")" != "$member" ]] || \
-          unlink "${member#$RUNTIME_DIRECTORY}"
+        [ "$(readlink "${member#"$RUNTIME_DIRECTORY"}")" != "$member" ] || \
+          unlink "${member#"$RUNTIME_DIRECTORY"}"
     done
 }
 
